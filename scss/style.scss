@@ -1,0 +1,881 @@
+@import "variables";
+@mixin espaciadoTitulo {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-family: $medium;
+    font-size: 1.5rem;
+}
+/***********************************************/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/***********************************************/
+/*******************TIPOGRAFIA******************/
+/***********************************************/
+@font-face {
+    font-family: ´rubik-regular´;
+    src: url(../tipografias/static/Rubik-Regular.ttf);
+}
+@font-face {
+    font-family: ´rubik-bold´;
+    src: url(../tipografias/static/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: ´rubik-semibold´;
+    src: url(../tipografias/static/Rubik-SemiBold.ttf);
+}
+@font-face {
+    font-family: ´rubik-light´;
+    src: url(../tipografias/static/Rubik-Light.ttf);
+}
+@font-face {
+    font-family: ´rubik-medium´;
+    src: url(../tipografias/static/Rubik-Medium.ttf);
+}
+
+/***********************************************/
+/**********************HEADER*******************/
+/***********************************************/
+/*poner en 0 padding de valores puestos por bootstrap*/ 
+#header{
+    padding-right: 0%;
+    padding-left: 0%;
+    
+    .BtnContactoNav{
+        background-color: $naranjaPrincipal;
+        border-color: $naranjaPrincipal;   
+            
+        .textoBtnContactoNav{
+            font-family: $medium;
+            text-decoration: none;
+            color: white;
+        }
+        &:hover{
+            background-color: $naranjaSecundario;
+            border-color: $naranjaSecundario;
+        }
+    }
+}
+button.navbar-toggler{
+    border: transparent;
+}
+.sinMargen{
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+#linkSpaces{
+    font-family: $regular;
+    color: black;
+    font-size: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+    &:hover{
+        color: $naranjaPrincipal;
+    }
+}
+
+
+/***********************************************/
+/****************ASIDE WATSAPP******************/
+/***********************************************/
+
+.btnWatsapp img {
+    background-color: $watsAppPrimario;
+    border-radius: 60px;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    text-align: center; 
+  
+  &:hover {
+    background-color: $watsAppSecundario; 
+}
+}
+/***********************************************/
+/******************PORTADA**********************/
+/***********************************************/  
+       
+.portadaIndex{
+    background-image: url(../img/portada/imgfondo2.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-position: center center;
+    height: 690px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6%;
+        
+    h1{
+    font-family:$medium;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    color: $portadaColorTipografia;
+    padding-left: 18.5%;
+    letter-spacing: 1px;
+    }
+    p{ 
+        font-family: $regular;
+        letter-spacing: 1px;
+        color: $portadaColorTipografia;
+        padding-left: 18.5%;
+        
+    }
+    div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%; 
+    padding-left: 18.5%;
+    
+    }
+    a{
+        margin-top : 1%;
+    }
+    
+    #botonSecundario {
+        background-color: $naranjaPrincipal;
+        border-color: $naranjaPrincipal;
+        font-family: $regular;
+        color: $tipografiaBoton; }
+      
+      #botonSecundario:hover {
+        background-color: $naranjaSecundario;
+        border-color: $naranjaSecundario;
+    }
+}
+.colorH1{
+    color: $naranjaPrincipal;
+}
+main{
+    background-color: $fondoColor;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+/**************************************************/
+/*********Color y tamaño columna central***********/
+/**************************************************/
+.colorColumnCentral{
+    background-color: $colorColumnCentral;
+    width: 63%;
+}
+.altColorCentral{
+    @extend.colorColumnCentral;
+    background-color: $altColorCentral;
+}
+
+#queHacemos {  
+    padding-bottom: 3%;
+    h4{
+        @include espaciadoTitulo();       
+    }
+    p{
+        text-align: justify;
+            font-size: 1.1rem;
+        }
+    }
+/***********************************************/
+/************Seccion caracteristicas************/
+/***********************************************/
+#funcionalidades{ 
+    background-color: $naranjaPrincipal;
+    
+.funcbox {
+  padding-bottom: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+    }
+    h4 {
+        
+        @include espaciadoTitulo();
+        
+        color: white;
+      }
+      .card {
+        margin: 1rem 0.7rem;
+        width: 14rem;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 15px 5px $naranjaSecundario;
+                box-shadow: 0px 0px 15px 5px $naranjaSecundario;
+                h5 {
+                    padding: 0 !important;
+                    color: $naranjaPrincipal;
+                    margin-top: -2rem;
+                  }
+                  p {
+                    font-size: 0.9rem;
+                    margin-top: 2rem;
+                    text-align: center;
+                    font-family: $regular;
+                }
+            }
+        }
+ 
+/***************************************************/
+/****************funcionalidades*******************/
+/**************************************************/
+
+.ventajas h4 {
+    @include espaciadoTitulo();
+    
+  }
+  
+  .ventajas .cardFunc img {
+     margin: 1rem auto;
+     border-radius: 15px;    
+  }
+  .cardFunc{
+      background-color: $naranjaPrincipal;
+      border-radius: 20px;    
+      border: 2px solid $naranjaPrincipal;
+      height: auto;
+      padding: 1rem 0rem;
+      box-shadow: 0px 0px 13px 1px $naranjaSecundario;
+      
+  }
+ 
+  .ventajas .row .textoVentajas {
+     h5{
+        font-weight: bold;
+     } 
+    .posicionTexto{
+          text-align: right;
+          margin-right: 0rem;
+          
+      }
+    text-align: justify;
+    ul{
+        padding-left: 0%;
+        li{
+            font-family: $regular;
+        }
+        img{
+            padding-right: 5%;
+            margin: 0% 0%;
+        }
+        .checkList{
+            padding-right: 0%;
+            padding-left: 5%;
+        }     
+    }
+  }
+  
+  .ventajas .row .textoVentajas h5 {
+    color: white;
+    text-align: left;
+    margin-right: 2rem;
+    padding-top: 0rem;
+    padding-bottom: 0.2rem;
+  }
+  
+  .ventajas .row .textoVentajas ul {
+      color: white;
+    text-align: left;
+    margin-right: 2rem;
+  }
+  
+  .ventajas .row .textoVentajas ul li {
+    list-style-type: none;
+  }
+/************************************/
+/***********Utilidades***************/
+/************************************/
+.utilidades {
+  text-align: center;
+  h4{
+    @include espaciadoTitulo()
+  }
+  .boxUtilidades{
+      padding: 0% 3%;
+      h4 {
+        @include espaciadoTitulo();
+        
+      }
+      P{
+        font-family: $regular;
+      }
+      .iconoUtilidades{
+        margin-bottom: 3%;
+    }
+    .imgUtilidades{
+        border: 2px solid $naranjaPrincipal;
+        border-radius: 10%;
+      }
+    }
+}
+/************************************/
+/***********quienes somos************/
+/************************************/
+#quienesSomos {
+    background-color: $naranjaPrincipal;
+    padding-bottom: 3rem;
+    h4 {
+        @include espaciadoTitulo();
+       
+        color: white;
+      }
+    .descripcionQS{
+        margin: 0rem 1rem;
+        p{
+            font-size: 1.1em;
+            padding-right: 1rem;
+            color: white;
+            line-height: 2rem;
+            margin-right: 3rem;
+            font-family: $regular;
+            text-align: justify;
+            
+            
+        }
+        ul {
+            li {
+                font-size: 1.1em;
+                padding-right: 1rem;
+                color: white;
+                line-height: 2rem;
+                margin-right: 3rem;
+                font-family: $regular;
+                text-align: justify;
+            }
+        }
+        
+        
+    }     
+}
+  
+/***********************************/
+/************Clientes***************/
+/***********************************/
+
+.colorClientes{
+    background-color: white;
+    #noPad{
+        @include espaciadoTitulo();
+        margin-bottom: 0;
+        
+    }
+}
+.testimonios{  
+    background-color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;     
+    div{           
+        p{
+        padding-top: 0.5rem;
+        text-align: justify;
+        font-family: $regular;
+        margin-bottom: 0%;
+        }
+        .bordesImgClients{
+            border-radius: 5%;
+            border:2px solid $naranjaPrincipal;           
+        }
+        .nombreGastronomico{
+            font-family: $medium;
+        }
+    }
+    #invert{
+        padding-top: 5rem;
+    }    
+}
+.video{
+    video{
+        width: 90%;
+    }
+}
+/**************************************/
+/****************Marcas****************/
+/**************************************/
+.grupoMarcas{   
+        h5{
+            padding-top: 0rem;
+        }
+    }
+.colorClientes{
+    h5{
+        @include espaciadoTitulo();
+        padding-top: 2rem;
+    }
+    .row{
+        --bs-gutter-x: 0rem;      
+    }
+}
+
+/***************************************/
+/*************Contacto******************/
+/***************************************/
+.contacto{
+    color: white;
+    background-color: $naranjaPrincipal;
+    h4{
+        @include espaciadoTitulo()
+    }   
+}
+.formulario{   
+    h6{
+        color: white;
+        font-size: 110%;
+        font-family: $medium;
+        text-align: center;
+      
+        margin-bottom: 1rem;
+    }
+    p{
+        color: white;
+        font-family: $light;
+        line-height: 2.1rem;
+        margin-top: 1rem;
+        text-align: center;
+        padding: 0rem 2rem;
+    } 
+     .sideContact{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+     .carta{
+         width: 50%;
+     }
+    .row{
+        padding: 0rem 1rem;
+        --bs-gutter-x: 0rem; 
+    }
+        
+    input{
+        border: $naranjaPrincipal;            
+    }
+    textarea{
+        border: $naranjaPrincipal;
+        height: 10rem;
+        }
+    .btnEnviar{
+        @extend.BtnContactoNav;
+        background-color: white;
+        margin: 2em 0rem;   
+        
+        }
+    button:hover{
+        background-color: $footerBackGround;
+        color: white;
+    }
+    .modal{
+        h5{
+            color: $naranjaPrincipal;
+            padding: 1rem 0rem;
+        }
+        p{
+            color: black;
+        }
+        button{
+            background-color: $naranjaPrincipal;
+            border-color: $naranjaPrincipal;
+        }
+        button:hover{
+            background-color: $naranjaSecundario;
+            border-color: $naranjaSecundario;
+        }
+    }
+}
+
+/*************************************/     
+/*************Footer******************/
+/*************************************/
+footer{
+    background-color: $footerBackGround;    
+    padding-top: 1%;
+    padding-bottom: 2%;
+    .grid1{
+        .contenedorLogo{                        
+            margin-bottom: 5%;
+             .logoFooter{
+                 width: 70%;
+             }
+        }        
+        h6{
+            padding-top: 5%;
+            color: white;
+            font-family: $medium;
+        }    
+    }
+}
+#noMarg{
+    padding-left: 0%;
+}
+#navFooter{
+    padding-left: 0%;
+}
+.grid2{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    .footerNav{
+        text-decoration: none;
+        font-family:´rubik-regular´;
+        color: white;
+        li{
+            padding-top: 1%;
+            list-style: none; 
+            padding-bottom: 2%;
+        }
+        li:hover{
+            color: $naranjaPrincipal
+        }     
+    }   
+}
+.grid3{
+    p{
+    color: white;
+    font-family:´rubik-regular´;
+    font-weight: bold;
+    }
+    
+    li{
+    font-family:´rubik-regular´;
+    color: white;
+    list-style: none;
+    padding-top: 1%;
+    }
+    img{
+        width: 14%;
+        margin-right: 3%;
+        margin-top: 1%;
+        border-radius: 15%; 
+        box-shadow: 0px 3px 3px rgb(27, 27, 27);      
+    }
+    img:hover{
+        transform: scale(110%);
+        transition: 0.5s;
+        box-shadow: 0px 3px 3px rgb(27, 27, 27);
+    }    
+}
+.licencia{
+    color: white;
+    font-family:´rubik-regular´;
+}
+/*****************************************/
+/**************Mediaqueries***************/
+/*****************************************/
+
+@media only screen and (max-width: 992px) {
+    /***********header************/
+    #linkSpaces{
+        padding-left: 0%;
+    }
+    .btnMenu {
+        width: 55px;
+    }
+    .botonMediaScreen{
+        display: none;
+    }
+    .tamano{
+        margin-top: 1rem;
+    }
+    #mediaHeader{
+        display:flex !important;
+        justify-content: space-between !important;
+        padding-right: 0%;
+    }
+    .sinMargen{
+        padding-left: 0%;
+    }
+    /******carril central********/
+    .colorColumnCentral{
+        width: 90%;
+    }
+    /********Quienes somos***********/
+    .margenParrafoVideo {
+        padding-top: 2%;
+        padding-bottom: 2%; 
+        font-family: $regular;       
+       } 
+    /********footer*****************/    
+    .grid1{
+        display: flex;
+        align-items: center;     
+    } 
+    .grid2{
+        padding-left: 0%;
+        align-items: flex-start;
+    }
+    .grid3{
+        padding-left: 0%;
+        img{
+            width: 6%;
+        }
+    }
+    
+    
+    /*caracteristicas*/ 
+    #funcionalidades {
+        .funcbox {
+            .card {
+                margin: 2rem 2rem;
+            }
+        }
+    }
+    
+    /*******funcionalidades*********/
+    .cardFunc{
+        height: auto;
+    }    
+    
+    #displayInverse{
+        display: flex;
+        flex-direction: column-reverse;
+        .posicionTexto{
+            text-align: unset;
+            .checkList{
+                padding-left: 0%;
+                padding-right: 5%;
+            }
+        }
+         .textoVentajas li{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+    /******quienes somos*****/
+    #quienesSomos{
+        .boxImgRowe {
+            text-align: center;
+            .imgRowe {
+                padding: 3rem 0rem;
+                width: 20%;
+                justify-content: center;
+            }
+        }
+        p{
+            margin-right: 0 !important;
+        }
+        .softwares {
+            text-align: center;
+            
+        }
+    }
+    .boxContacto {
+        margin: 0 !important;
+    }
+    .carta{
+        width: 15% !important; 
+    }
+    #footer {
+        .positionFooter{
+            padding-left: 1.75rem !important;
+        }
+        .contenedorLogo{
+            a{
+                img{
+                    width: 64%;
+                }
+            }
+        }
+    }
+    /***clientes****/
+    .testimonios{
+        padding-top: 3rem;
+        padding-bottom: 3rem;   
+        #invert{
+            padding-top: 3rem;
+        }
+    }
+    .video{
+        video{
+            width: 100%;
+        }
+        
+    }
+    /******contacto**********/
+    .btnEnviar{
+        padding-right: 4.75rem;
+        padding-left: 4.75rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+ /*********portada************/
+.portadaIndex{
+    h1{
+        padding-left: 9.5%;
+    }
+    p{
+        padding-left: 9.5%;
+    }
+    div{
+        padding-left: 9.5%;
+    }
+}
+    .testimonios{
+        div{
+            width: 100%;
+            padding-top: 2%;
+            .cuadro{
+                display: flex;
+                justify-content: center;
+            }
+            .bordesImgClients{
+                width: 40%;               
+            }
+            p{
+                padding-top: 5%;
+            }
+        }        
+    }
+    .marginDivision{
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    .parrafoVideo {
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    #invert{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #inMediaClients{
+        display: flex;
+        justify-content: center !important;
+    }
+    .marcas{
+        margin-bottom: 5%;
+    }
+    .form input, .form textarea{
+        width: 85%;
+    }  
+    .cardFunc{
+        width: 90%;
+    } 
+    .boxContacto {
+        text-align: center;
+        img{
+            padding-left: 0 !important;
+        }
+    }
+    .grid3{
+        img{
+            width: 10%;
+        }
+    }
+}
+@media only screen and (max-width: 576px){
+    main{
+        background-color: white;
+    }
+   
+    #queHacemos{
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    .px-5{
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+    .portadaIndex{
+        h1{
+            padding-left: 5%;
+            font-size: 180%;
+        }
+        p{
+            font-size: 80%;
+            padding-left: 5%;
+        }
+        div{
+            padding-left: 5%;
+            button{
+                font-size: 80%;
+            }
+            
+        }
+    }
+    .logoMediaScreen{
+        margin-bottom: 5%;
+    }
+    /******utilidades*********/
+    .colorUtilidadesMedia{
+        background-color: $altColorCentral;
+    }
+    /******contacto***********/
+   
+    /*****funcionalidades*****/
+    .cardsFuncionalidades{
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    .cardFunc{
+        width: 100%;
+    } 
+    /* quienes somos*/
+    #quienesSomos {
+        .descripcionQS{
+            p{
+                padding-right: 0%;
+            }
+            ul{
+                li{
+                    padding-right: 0%;
+                    margin-right: 0%;
+                }
+            }
+        }
+       div{
+           padding-right: 0%;
+           padding-left: 0%;
+       }
+        .softwares{
+            a{
+                margin: -0.5rem
+            }
+        }
+    }
+    #imgRoweMovil{       
+        width: 50% !important;
+    }
+   /*clientes*/ 
+   #clientes{
+       padding: 0% 0%;
+   }
+    /*footer*/
+    #footer{
+        .positionFooter{
+            padding-left: 0.75rem !important;
+        }
+        text-align: left;
+        .grid1{
+            justify-content: left;
+        }
+        .grid2{
+            align-items: flex-start;
+            padding-left: 0%;
+        }
+        .grid3{
+            padding-left: 0%;
+        }
+    }
+    .licencia{
+        p{
+        font-size: 80%;
+        }
+    }
+}
